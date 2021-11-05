@@ -5,7 +5,7 @@ endif
 
 # System_ext
 ifndef TARGET_COPY_OUT_SYSTEM_EXT
-    TARGET_COPY_OUT_PRODUCT := system/system_ext
+    TARGET_COPY_OUT_SYSTEM_EXT := system/system_ext
 endif
 
 ## SELinux
