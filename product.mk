@@ -25,37 +25,18 @@ PRODUCT_COPY_FILES += \
     vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
 endif
 
-## Media
-#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-#    ro.config.vc_call_vol_steps=7 \
-#    ro.config.media_vol_steps=25
-
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
-## Remove Dialer Apps
-ifneq ($(filter %shieldtablet %yellowstone,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += remove-dialer
-endif
-
-## Remove Telephony Apps
-ifneq ($(filter %flo %flox %gts4lvwifi %icosa,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += remove-telephony
-endif
-
 ## SUW
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     setupwizard.feature_deferred_snooze_allow_never=true
 
 ## Updater
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://updater-api.oddsolutions.us/api/v1/{device}/{type}/{incr}"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.allow_downgrading=true
-
-## Signing
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
 
 ifeq ($(WITH_GMS),true)
 ifneq ($(PRODUCT_IS_ATV),true)
