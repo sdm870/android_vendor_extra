@@ -18,6 +18,7 @@ PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
 
 ## ih8sn
+ifeq ($(WITH_GMS),true)
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/ih8sn \
     system/etc/ih8sn.conf \
@@ -39,6 +40,8 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 PRODUCT_COPY_FILES += \
     vendor/extra/configs/pixel/sysconfig/pixel_2016_exclusive.xml:system/etc/sysconfig/pixel_2016_exclusive.xml
+
+endif # WITH_GMS
 
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
