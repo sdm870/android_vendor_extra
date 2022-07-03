@@ -13,6 +13,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.adb.shell=/system/xbin/bash
 
+## Pixel Apps
+include vendor/extra/apps/GoogleApps.mk
+
 ## Google Fonts
 include vendor/extra/google-fonts/GoogleFonts.mk
 

@@ -9,4 +9,6 @@ ifndef TARGET_COPY_OUT_SYSTEM_EXT
 endif
 
 ## SELinux
-BOARD_SEPOLICY_DIRS += vendor/extra/sepolicy
+BOARD_SEPOLICY_DIRS += \
+    hardware/google/pixel-sepolicy/flipendo \
+    vendor/extra/sepolicy
