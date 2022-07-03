@@ -13,6 +13,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.adb.shell=/system/xbin/bash
 
+## Google Fonts
+include vendor/extra/google-fonts/GoogleFonts.mk
+
 ## fastbootd
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
