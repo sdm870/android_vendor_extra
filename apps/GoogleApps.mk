@@ -1,3 +1,4 @@
 ## Packages
 PRODUCT_PACKAGES += \
-    FlipendoPrebuilt
+    FlipendoPrebuilt \
+    TurboPrebuilt

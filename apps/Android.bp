@@ -9,3 +9,27 @@ android_app_import {
         system_ext_specific: true,
 }
 
+android_app_import {
+        name: "TurboPrebuilt",
+        owner: "google",
+        apk: "apks/TurboPrebuilt.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        optional_uses_libs: ["org.apache.http.legacy"],
+        privileged: true,
+        product_specific: true,
+        required: [
+                "privapp_whitelist_com.google.android.apps.turbo"
+        ],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.google.android.apps.turbo",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "permissions/privapp_whitelist_com.google.android.apps.turbo.xml",
+    filename_from_src: true,
+}
+
