@@ -48,7 +48,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/etc/sysconfig/pixel_2016_exclusive.xml
 
 PRODUCT_COPY_FILES += \
-    vendor/extra/configs/pixel/sysconfig/pixel_2016_exclusive.xml:system/etc/sysconfig/pixel_2016_exclusive.xml
+    vendor/extra/configs/pixel/pixel_2016_exclusive.xml:system/etc/sysconfig/pixel_2016_exclusive.xml
 
 endif # WITH_GMS
 
