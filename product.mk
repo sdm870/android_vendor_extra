@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
 
 ## ih8sn
-ifeq ($(WITH_GMS),true)
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/ih8sn \
     system/etc/ih8sn.conf \
@@ -42,8 +41,6 @@ else
 PRODUCT_COPY_FILES += \
     vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
 endif
-
-endif # WITH_GMS
 
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
