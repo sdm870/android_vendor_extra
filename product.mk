@@ -50,6 +50,7 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://gist.githubusercontent.com/althafvly/4b71c8aeefa58280789f45ce6965a607/raw/update.json"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
 ## Signing
