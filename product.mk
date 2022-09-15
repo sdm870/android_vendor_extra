@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
     vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
 endif
 
+ifeq ($(WITH_GMS),true)
+    $(call inherit-product, vendor/gapps/$(TARGET_ARCH)/$(TARGET_ARCH)-vendor.mk)
+endif
+
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
