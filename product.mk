@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 ifeq ($(WITH_GMS),true)
-    $(call inherit-product, vendor/gapps/$(TARGET_ARCH)/$(TARGET_ARCH)-vendor.mk)
+    $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 endif
 
 ## Overlays
