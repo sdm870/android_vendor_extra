@@ -31,12 +31,12 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 PRODUCT_PACKAGES += ih8sn
 
-ifneq ("$(wildcard  vendor/extra/configs/ih8sn/ih8sn_$(subst lineage_,,$(TARGET_PRODUCT)).conf)","")
+ifneq ("$(wildcard  vendor/extra/configs/ih8sn/ih8sn.conf.$(subst lineage_,,$(TARGET_PRODUCT)))","")
 PRODUCT_COPY_FILES += \
-    vendor/extra/configs/ih8sn/ih8sn_$(subst lineage_,,$(TARGET_PRODUCT)).conf:/system/etc/ih8sn.conf
+    vendor/extra/configs/ih8sn/ih8sn.conf.$(subst lineage_,,$(TARGET_PRODUCT)):/system/etc/ih8sn.conf
 else
 PRODUCT_COPY_FILES += \
-    vendor/extra/configs/ih8sn/ih8sn_generic.conf:/system/etc/ih8sn.conf
+    vendor/extra/configs/ih8sn/ih8sn.conf.generic:/system/etc/ih8sn.conf
 endif
 
 ifeq ($(WITH_GMS),true)
