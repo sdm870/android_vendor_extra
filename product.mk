@@ -50,7 +50,7 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://dl.althafvly.in/s/TA3YzN8KgHcsrLs/download?path=&files={device}.json"
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://dl.althafvly.in/s/lineage_{device}"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
 ## Signing
