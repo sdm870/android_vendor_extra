@@ -10,6 +10,20 @@ android_app_import {
 }
 
 android_app_import {
+        name: "SoundPickerPrebuilt",
+        owner: "google",
+        apk: "apks/SoundPickerPrebuilt.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        optional_uses_libs: [
+                 "androidx.window.extensions",
+                 "androidx.window.sidecar",
+        ],
+}
+
+android_app_import {
         name: "TurboPrebuilt",
         owner: "google",
         apk: "apks/TurboPrebuilt.apk",

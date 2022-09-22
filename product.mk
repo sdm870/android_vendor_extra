@@ -19,9 +19,6 @@ include vendor/extra/apps/GoogleApps.mk
 ## Google Fonts
 include vendor/extra/google-fonts/GoogleFonts.mk
 
-## Pixel Sounds
-include vendor/extra/sounds/GoogleAudio.mk
-
 ## fastbootd
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
