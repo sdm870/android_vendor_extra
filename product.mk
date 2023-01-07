@@ -24,20 +24,7 @@ PRODUCT_PACKAGES += fastbootd
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
 
 ## ih8sn
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/bin/ih8sn \
-    system/etc/ih8sn.conf \
-    system/etc/init/ih8sn.rc
-
-PRODUCT_PACKAGES += ih8sn
-
-ifneq ("$(wildcard  vendor/extra/configs/ih8sn/ih8sn.conf.$(subst lineage_,,$(TARGET_PRODUCT)))","")
-PRODUCT_COPY_FILES += \
-    vendor/extra/configs/ih8sn/ih8sn.conf.$(subst lineage_,,$(TARGET_PRODUCT)):/system/etc/ih8sn.conf
-else
-PRODUCT_COPY_FILES += \
-    vendor/extra/configs/ih8sn/ih8sn.conf.generic:/system/etc/ih8sn.conf
-endif
+$(call inherit-product-if-exists, ih8sn/product.mk)
 
 ifeq ($(WITH_GMS),true)
     $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
