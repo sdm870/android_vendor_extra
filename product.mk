@@ -23,10 +23,6 @@ PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
 ## ih8sn
 $(call inherit-product-if-exists, ih8sn/product.mk)
 
-ifeq ($(WITH_GMS),true)
-    $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-endif
-
 ## Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
