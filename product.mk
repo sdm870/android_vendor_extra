@@ -27,7 +27,7 @@ $(call inherit-product-if-exists, ih8sn/product.mk)
 PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://dl.althafvly.in/s/lineage_{device}/download"
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://nextcloud.althafvly.com/s/lineage_{device}/download"
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
 ## Signing
