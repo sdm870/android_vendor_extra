@@ -16,10 +16,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ## Pixel Apps
 include vendor/extra/apps/GoogleApps.mk
 
-## fastbootd
-PRODUCT_PACKAGES += fastbootd
-PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
-
 ## ih8sn
 $(call inherit-product-if-exists, ih8sn/product.mk)
 
