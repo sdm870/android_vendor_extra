@@ -27,7 +27,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://nextcloud.alth
 
 ## Signing
 ifeq ($(USE_DEV_CERTIFICATE),true)
-ifneq ($(wildcard keys/$(subst lineage_,,$(TARGET_PRODUCT))/.*),)
-PRODUCT_DEFAULT_DEV_CERTIFICATE := keys/$(subst lineage_,,$(TARGET_PRODUCT))/releasekey
+DEV_DEVICE=$(shell echo $(TARGET_PRODUCT) | cut -d'_' -f2-)
+ifneq ($(wildcard keys/$(DEV_DEVICE)/.*),)
+DEFAULT_SYSTEM_DEV_CERTIFICATE := keys/$(DEV_DEVICE)/releasekey
 endif
 endif
