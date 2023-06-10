@@ -24,7 +24,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 ## Recovery
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri="https://nextcloud.althafvly.com/s/lineage_{device}/download"
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.recovery_update=true
 
 ## Signing
 ifeq ($(USE_DEV_CERTIFICATE),true)
@@ -32,10 +31,3 @@ ifneq ($(wildcard keys/$(subst lineage_,,$(TARGET_PRODUCT))/.*),)
 PRODUCT_DEFAULT_DEV_CERTIFICATE := keys/$(subst lineage_,,$(TARGET_PRODUCT))/releasekey
 endif
 endif
-
-## SUW
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    setupwizard.feature_deferred_snooze_allow_never=true
-
-## Updater
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.allow_downgrading=true
